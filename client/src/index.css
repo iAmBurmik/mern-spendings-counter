@@ -1,0 +1,50 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html[data-theme="light"] {
+  --app-container: #f3f6fd;
+  --secondaty-color: #fff;
+  --text-and-icons-color: #1f1c2e;
+  --menu-icons-color: #1f1c2e;
+  --menu-icon-active: #1f1c2e;
+  --menu-icon-hover: #232B55D6;
+  --diagram-color: #e8d37d;
+  --add-section-text-color: #2a5b84;
+  --add-section-input-color: #666;
+}
+html[data-theme="dark"] {
+  --app-container: #1f1d2b;
+  --secondaty-color: #1f2937;
+  --text-and-icons-color: #fff;
+  --menu-icons-color: rgba(255,255,255,.8);
+  --menu-icon-active: rgba(195, 207, 244, 0.2);
+  --menu-icon-hover: rgba(195, 207, 244, 0.1);
+  --diagram-color: #a1a1a1;
+  --add-section-text-color: #fff;
+  --add-section-input-color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--app-container);
+}

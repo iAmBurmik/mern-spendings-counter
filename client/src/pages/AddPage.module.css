@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-section {
+    background-color: var(--secondaty-color);
+    border-radius: 32px;
+    padding: 32px;
+    overflow: hidden;
+    height: 100%;
+    width: 50%;
+}
+
+.wrong-entry {
+    animation: wrong-log 0.3s forwards;
+}
+
+@keyframes wrong-log {
+    0% {
+        transform: translateX(0);
+   }
+    20% {
+        transform: translateX(20px);
+   }
+    40% {
+        transform: translateX(-20px);
+   }
+   100% {
+        transform: translateX(0);
+   }
+}
+
+.add-section h1{
+    color: var(--add-section-text-color);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.form-group {
+    position: relative;
+    font-size: 14.65px;
+    color: #666;
+}
+.form-group + .form-group {
+    margin-top: 30px;
+}
+.form-group .form-label {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 7px;
+    color: #666;
+    transition: 0.3s;
+}
+.form-group .form-control {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    height: 35px;
+    background: none;
+    border: none;
+    padding: 5px 0;
+    transition: 0.3s;
+    border-bottom: 1px solid #777;
+    color: var(--add-section-input-color);
+}
+
+.form-group .form-control.invalid {
+    outline: none;
+    border-color: red;
+    /* color: red; */
+}
+
+.form-group .form-control:focus, .form-group .form-control:valid {
+    outline: none;
+    box-shadow: 0 1px var(--add-section-text-color);
+    border-color: var(--add-section-text-color);
+}
+.form-group .form-control:focus + .form-label, .form-group .form-control:valid + .form-label {
+    font-size: 12px;
+    color: var(--add-section-text-color);
+    transform: translateY(-15px);
+}
+
+.btn {
+    background: var(--secondaty-color);
+    padding: 5px;
+    width: 150px;
+    height: 35px;
+    border: 1px solid var(--add-section-text-color);
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 50px var(--add-section-text-color) inset;
+    border-radius: 12px;
+    color: var(--secondaty-color);
+}
+
+.btn:hover {
+    box-shadow: 0 0 var(--add-section-text-color) inset;
+    color: var(--add-section-text-color);
+}
+.btn:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 720px) {
+    .add-section { width: 60%; }
+}
+
+@media screen and (max-width: 520px) {
+    .add-section { width: 100%; }
+}

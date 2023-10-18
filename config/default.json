@@ -1,0 +1,5 @@
+{
+    "port": 5001,
+    "jwtSecret": "Nikita mern project",
+    "mongoUri": "mongodb+srv://postnburma:Y12brbnf@cluster0.rlcshuy.mongodb.net/app"
+}

@@ -1,0 +1,20 @@
+.cost-list {
+    overflow: scroll;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.cost-list:last-child {
+    padding-bottom: 2rem;
+}
+  
+.cost-list__fallback {
+    text-transform: none;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    opacity: 0.9;
+    color: var(--text-and-icons-color);
+    text-align: center;
+}
